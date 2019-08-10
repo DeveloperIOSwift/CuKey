@@ -1,0 +1,165 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXFileReference section */
+		8B991FD622FD3F030089F4B2 /* .DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file; path = .DS_Store; sourceTree = "<group>"; };
+		8B991FD722FD3F030089F4B2 /* CuKey.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CuKey.mm; sourceTree = "<group>"; };
+		8B991FD822FD3F030089F4B2 /* cukey.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = cukey.xcodeproj; sourceTree = "<group>"; };
+		8B991FDB22FD3F030089F4B2 /* CuKey_prefsheader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CuKey_prefsheader.h; sourceTree = "<group>"; };
+		8B991FDC22FD3F030089F4B2 /* CuKeyKB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CuKeyKB.h; sourceTree = "<group>"; };
+		8B991FDD22FD3F030089F4B2 /* CuKeyKB.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CuKeyKB.mm; sourceTree = "<group>"; };
+		8B991FDE22FD3F030089F4B2 /* entry.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = entry.plist; sourceTree = "<group>"; };
+		8B991FDF22FD3F030089F4B2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8B991FE022FD3F030089F4B2 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		8B991FD022FD3F030089F4B2 = {
+			isa = PBXGroup;
+			children = (
+				8B991FD622FD3F030089F4B2 /* .DS_Store */,
+				8B991FD722FD3F030089F4B2 /* CuKey.mm */,
+				8B991FD822FD3F030089F4B2 /* cukey.xcodeproj */,
+				8B991FDB22FD3F030089F4B2 /* CuKey_prefsheader.h */,
+				8B991FDC22FD3F030089F4B2 /* CuKeyKB.h */,
+				8B991FDD22FD3F030089F4B2 /* CuKeyKB.mm */,
+				8B991FDE22FD3F030089F4B2 /* entry.plist */,
+				8B991FDF22FD3F030089F4B2 /* Makefile */,
+				8B991FE022FD3F030089F4B2 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		8B991FD922FD3F030089F4B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		8B991FD522FD3F030089F4B2 /* cukey */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 8B991FE222FD3F030089F4B2 /* Build configuration list for PBXLegacyTarget "cukey" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/developer/Downloads/Monarch-master/Monarch/monarchtweak/cukey";
+			dependencies = (
+			);
+			name = cukey;
+			passBuildSettingsInEnvironment = 1;
+			productName = cukey;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		8B991FD122FD3F030089F4B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = 8B991FD422FD3F030089F4B2 /* Build configuration list for PBXProject "cukey 2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8B991FD022FD3F030089F4B2;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8B991FD922FD3F030089F4B2 /* Products */;
+					ProjectRef = 8B991FD822FD3F030089F4B2 /* cukey.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8B991FD522FD3F030089F4B2 /* cukey */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		8B991FD222FD3F030089F4B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		8B991FD322FD3F030089F4B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		8B991FE322FD3F030089F4B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = cukey;
+			};
+			name = Debug;
+		};
+		8B991FE422FD3F030089F4B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = cukey;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B991FD422FD3F030089F4B2 /* Build configuration list for PBXProject "cukey 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B991FD222FD3F030089F4B2 /* Debug */,
+				8B991FD322FD3F030089F4B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B991FE222FD3F030089F4B2 /* Build configuration list for PBXLegacyTarget "cukey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B991FE322FD3F030089F4B2 /* Debug */,
+				8B991FE422FD3F030089F4B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B991FD122FD3F030089F4B2 /* Project object */;
+}

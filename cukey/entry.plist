@@ -1,0 +1,10 @@
+{
+	entry = {
+		bundle = CuKey;
+		cell = PSLinkCell;
+		detail = CuKeyListController;
+		icon = "CuKey.png";
+		isController = 1;
+		label = CuKey;
+	};
+}
