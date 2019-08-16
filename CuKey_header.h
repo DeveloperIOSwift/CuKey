@@ -10,7 +10,7 @@
 
 //see if tweak is enabled!
 BOOL kEnabled;
-
+BOOL kSounds;
 
 
 //default sound switches 
@@ -32,13 +32,29 @@ NSString *kKBSounds;
 
 AVAudioSession *session = [AVAudioSession sharedInstance];
 
-//interfaces 
+//interfaces
 
+@interface UIDatePickerContentView
+@property (nonatomic, copy, readwrite) UIColor *backgroundColor;
+@end
+
+@interface UIKeyboard 
+    @property (nonatomic, copy, readwrite) UIColor *backgroundColor;
+    @end
+
+@interface UIPickerTableViewTitledCell
+@property (nonatomic, copy, readwrite) UIColor *backgroundColor;
+@end
+
+@interface UITextSelectionView
+@property (nonatomic, copy, readwrite) UIColor *backgroundColor;
+@end
 
 @interface _UIKBCompatInputView
 @property (nonatomic, copy, readwrite) UIColor *backgroundColor;
 @end
-
+@interface UIKeyboardDockView : UIView
+    @end
 @interface UIKeyboardDicationBackground
 @property (nonatomic, copy, readwrite) UIColor *backgroundColor;
 @end
@@ -52,7 +68,7 @@ AVAudioSession *session = [AVAudioSession sharedInstance];
 @property (nonatomic, assign, readwrite) BOOL whiteText;
 @end
 
-@interface _UIKBRenderFactory
+@interface UIKBRenderFactory
 @property (nonatomic, copy, readwrite) UIColor *backgroundColor;
 @end
 
@@ -65,6 +81,7 @@ AVAudioSession *session = [AVAudioSession sharedInstance];
 @end
 
 @interface UIKeyboardLayoutStar : UIView
+
 @property (nonatomic, copy) NSString * localizedInputKey;
 -(void)setPlayKeyClickSoundOn:(int)arg1;
 @end

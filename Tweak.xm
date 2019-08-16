@@ -5,9 +5,29 @@ NSDictionary* prefs = [NSDictionary dictionaryWithContentsOfFile:@"/var/mobile/L
 NSString* keyboardColor = [prefs objectForKey:@"keyboardColor"];
 
 
+/*
+// top bar soug
+%hook UIKeyboard
+-(void)layoutSubviews {
+%orig;
+self.backgroundColor = [UIColor blackColor];
+}
+%end
+*/
 
+
+
+// color Text Selection
+%hook UITextSelectionView
+- (id)caretViewColor{
+return [UIColor redColor];
+}
+%end
+
+
+
+// keyboardColor
 %hook _UIKBCompatInputView
-
 -(void) layoutSubviews {
 if (kUseDefaultCOLOR) {
 %orig;
@@ -16,7 +36,10 @@ self.backgroundColor = LCPParseColorString(keyboardColor, @"#2b2f46");
 }
 }
 %end
-/*
+
+
+
+// keyboardColor
 %hook UIKBSplitImageView
 
 -(void) layoutSubviews {
@@ -28,7 +51,7 @@ self.backgroundColor = LCPParseColorString(keyboardColor, @"#2b2f46");
 }
 %end
 
-*/
+
 %hook UIKBRenderConfig
 
 -(BOOL)lightKeyboard {
@@ -46,10 +69,13 @@ return 1;
 
 
 %hook UIKeyboardLayoutStar
+
+
+
 -(void)playKeyClickSoundOnDownForKey:(UIKBTree *)key {
 
 	if (kEnabled && !kUseDefaultKB) {
-
+if (kSounds) {
 
             SystemSoundID selectedSound = 0;
 
@@ -64,12 +90,12 @@ return 1;
 }
 	
 	
-
+}
 }
 
 -(void)setPlayKeyClickSoundOn:(int)arg1 {
 	if (kEnabled && !kUseDefaultKB) {
-
+if (kSounds) {
 	            UIKBTree *delKey = [%c(UIKBTree) key];
 				NSString *myDelKeyString = [delKey name];
 
@@ -80,7 +106,7 @@ return 1;
 		
       }
 }
-
+}
 	else {
 		%orig;
 	}
@@ -100,7 +126,7 @@ extern NSString *const HBPreferencesDidChangeNotification;
     preferences = [[HBPreferences alloc] initWithIdentifier:@"com.yakir.cukey"];
 
 	[preferences registerBool:&kEnabled default:NO forKey:@"kEnabled"];
-
+[preferences registerBool:&kSounds default:NO forKey:@"kSounds"];
 
 	[preferences registerObject:& kKBSounds default:nil forKey:@"kKBSounds"];
 	[preferences registerBool:& kUseDefaultKB default:NO forKey:@"kUseDefaultKB"];
